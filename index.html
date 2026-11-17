@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="es" data-tema="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ecosistema Digital de Campaña · Oscar Polania</title>
+<meta name="description" content="Ocho aplicaciones conectadas para dirigir líderes, votantes y el día de elección desde un solo lugar. La campaña que se mide, gana.">
+<meta name="theme-color" content="#0B1324">
+<meta property="og:title" content="Ecosistema Digital de Campaña">
+<meta property="og:description" content="La campaña que se mide, gana. Ocho aplicaciones conectadas para Tu Candidato.">
+<meta property="og:image" content="https://botheart911.github.io/ECOSISTEMA-POLITICO-ALCALDIA/img/logo-512.png">
+<link rel="icon" href="img/logo-64.png" type="image/png">
+<link rel="apple-touch-icon" href="img/logo-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700&display=swap">
+<link rel="preload" as="image" href="img/tablero-1200.webp" imagesrcset="img/tablero-720.webp 720w, img/tablero-1200.webp 1200w" imagesizes="(max-width: 900px) 92vw, 56vw">
+<script>try{var t=localStorage.getItem('ep_tema');if(t)document.documentElement.dataset.tema=t;}catch(e){}</script>
+<link rel="stylesheet" href="css/app.css?v=2026.11.16.1">
+<script src="version.js"></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 7h6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c.6-3.4 3-5.2 6-5.2s5.4 1.8 6 5.2"/><path d="M16 4.6a3.2 3.2 0 0 1 0 6.3M18 14.9c1.6.7 2.7 2.4 3 5.1"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10M10 20v-6h4v6"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3z"/><path d="M14 14h3v3h-3zM18 18h3v3h-3zM18 14h3M14 18v3"/></symbol>
+    <symbol id="i-vote" viewBox="0 0 24 24"><path d="M4 13h16v8H4z"/><path d="m8 9 3 3 6-7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9 5 4h14l2 5"/><path d="M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM5 13v7h14v-7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.5-1.5 1.6-2.2 3-2.2s2.5.7 3 2.2M15 10h3M15 13h3"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9.5c.3 2 1.8 3.8 4 4.5l1.2-1.2 2 .9c-.3 1.3-1.3 1.8-2.4 1.6C10.6 14.7 8.6 12.5 8 10c-.2-1 .4-2 1.6-2.3l.9 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></symbol>
+    <symbol id="i-signal" viewBox="0 0 24 24"><path d="M2 20h2M7 20v-4M12 20v-8M17 20V8M22 20V4"/><path d="m3 3 18 18"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  </defs>
+</svg>
+
+<header class="barra" id="barra">
+  <a class="marca" href="#portada" aria-label="Inicio">
+    <img src="img/logo-96.webp" width="36" height="36" alt="">
+    <span><b>OSCAR POLANIA</b><small>Experto en soluciones digitales</small></span>
+  </a>
+  <nav class="barra__acc">
+    <button class="tema" id="btnTema" type="button" aria-label="Cambiar modo claro u oscuro"><svg><use href="#i-moon"/></svg></button>
+    <button class="btn btn--oro btn--sm" type="button" data-abrir-propuesta>Quiero la propuesta</button>
+  </nav>
+  <div class="progreso" id="progreso"></div>
+</header>
+
+<main>
+<!-- 01 PORTADA -->
+<section id="portada" class="sec sec--oscura hero">
+  <div class="fondo-red" aria-hidden="true"></div>
+  <div class="hero__txt">
+    <p class="eyebrow oro rev">Ecosistema digital de campaña</p>
+    <h1 class="rev" style="--d:.08s">La campaña que se mide, <span class="brillo">gana.</span></h1>
+    <p class="lead rev" style="--d:.16s">Ocho aplicaciones conectadas para dirigir líderes, votantes y el día de elección desde un solo lugar.</p>
+    <div class="hero__cta rev" style="--d:.24s">
+      <button class="btn btn--oro" type="button" data-abrir-propuesta>Quiero generar la propuesta <svg><use href="#i-arrow"/></svg></button>
+      <a class="btn btn--vidrio" href="#video">Ver en 45 segundos <svg><use href="#i-play"/></svg></a>
+    </div>
+  </div>
+  <div class="hero__media">
+    <figure class="medio medio--pc rev-der" data-video="">
+      <img src="img/tablero-1200.webp" srcset="img/tablero-720.webp 720w, img/tablero-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 56vw" width="1200" height="762" alt="Tablero de registros por zona en computador, con datos personales difuminados" fetchpriority="high">
+    </figure>
+    <figure class="medio medio--cel flota rev-arr" style="--d:.3s" data-video="">
+      <img src="img/inicio-cel-420.webp" srcset="img/inicio-cel-280.webp 280w, img/inicio-cel-420.webp 420w" sizes="(max-width: 900px) 34vw, 15vw" width="420" height="801" alt="Inicio del panel de dirección en celular" decoding="async">
+    </figure>
+  </div>
+  <a class="bajar" href="#reto" aria-label="Seguir bajando"><span></span></a>
+</section>
+
+<!-- 02 RETO -->
+<section id="reto" class="sec">
+  <div class="cont">
+    <p class="eyebrow rev">El reto</p>
+    <h2 class="rev">Las campañas pierden votos por lo que no alcanzan a ver</h2>
+    <div class="rejilla r3">
+      <article class="tarjeta rev" style="--d:.05s"><svg class="ico"><use href="#i-book"/></svg><h3>Listas en papel y hojas sueltas</h3><p>Nadie sabe con certeza cuántos votos son firmes ni dónde están.</p></article>
+      <article class="tarjeta rev" style="--d:.12s"><svg class="ico"><use href="#i-users"/></svg><h3>Líderes sin seguimiento</h3><p>La red crece, pero no se mide quién trabaja y quién solo suma nombres.</p></article>
+      <article class="tarjeta rev" style="--d:.19s"><svg class="ico"><use href="#i-alert"/></svg><h3>Día de elección a ciegas</h3><p>Sin datos en vivo no se sabe a quién falta movilizar.</p></article>
+    </div>
+    <div class="franja rev"><svg class="ico oro"><use href="#i-bolt"/></svg><p>El ecosistema convierte cada contacto en un dato que se mide, se sigue y se defiende.</p></div>
+  </div>
+</section>
+
+<!-- 03 ECOSISTEMA -->
+<section id="ecosistema" class="sec">
+  <div class="cont">
+    <div class="cabeza">
+      <div><p class="eyebrow rev">El ecosistema</p><h2 class="rev"><span class="num" data-n="8">8</span> aplicaciones, una sola base de datos</h2></div>
+      <p class="rev lead2">Todo lo que pasa en la calle llega a la dirección de campaña al instante.</p>
+    </div>
+    <div class="rejilla r4 apps">
+      <article class="app app--dest rev"><svg class="ico"><use href="#i-chart"/></svg><h3>Panel de dirección</h3><p>Base de datos, líderes, tablero y análisis.</p></article>
+      <article class="app rev" style="--d:.05s"><svg class="ico"><use href="#i-home"/></svg><h3>App ciudadana</h3><p>Servicios, gestiones y zona de líderes.</p></article>
+      <article class="app rev" style="--d:.1s"><svg class="ico"><use href="#i-doc"/></svg><h3>Inscripciones</h3><p>Jornadas y eventos con formulario propio.</p></article>
+      <article class="app rev" style="--d:.15s"><svg class="ico"><use href="#i-vote"/></svg><h3>Votación</h3><p>Escáner del día de elección y conteo en vivo.</p></article>
+      <article class="app rev" style="--d:.2s"><svg class="ico"><use href="#i-clock"/></svg><h3>Asistencias</h3><p>Quién llegó a cada evento, leído con QR.</p></article>
+      <article class="app rev" style="--d:.25s"><svg class="ico"><use href="#i-store"/></svg><h3>Comercios aliados</h3><p>Catálogo, beneficios y reseñas.</p></article>
+      <article class="app rev" style="--d:.3s"><svg class="ico"><use href="#i-phone"/></svg><h3>Call center</h3><p>Cada llamada queda registrada.</p></article>
+      <article class="app rev" style="--d:.35s"><svg class="ico"><use href="#i-id"/></svg><h3>Credencial QR</h3><p>Identificación verificable de cada persona.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video" class="sec sec--oscura">
+  <div class="fondo-red" aria-hidden="true"></div>
+  <div class="cont dos">
+    <div>
+      <p class="eyebrow oro rev">En 45 segundos</p>
+      <h2 class="rev">Las ocho aplicaciones, funcionando</h2>
+      <p class="lead rev">Panel de dirección, app ciudadana, inscripciones, votación, asistencias, comercios, call center y avisos al celular, grabados en uso real con datos de ejemplo.</p>
+    </div>
+    <figure class="medio medio--cel medio--video rev-der" data-video="vid/promo-9x16.mp4" data-sonido="1">
+      <img src="img/promo-poster.webp" width="360" height="640" alt="Video promocional del ecosistema" loading="lazy" decoding="async">
+      <button class="play" type="button" aria-label="Reproducir con sonido"><svg><use href="#i-play"/></svg></button>
+    </figure>
+  </div>
+</section>
+
+<!-- 04 LÍDERES -->
+<section id="lideres" class="sec">
+  <div class="cont dos dos--media">
+    <div>
+      <p class="eyebrow rev">Control de líderes</p>
+      <h2 class="rev">Cada líder, su red y su resultado</h2>
+      <ul class="puntos">
+        <li class="rev"><h3>Tablero de la red</h3><p>Crecimiento, acumulado y tipificación, mes a mes y en vivo.</p></li>
+        <li class="rev" style="--d:.08s"><h3>Puntaje de gestión</h3><p>Cada líder con su escala: excelente, bueno, regular o bajo.</p></li>
+        <li class="rev" style="--d:.16s"><h3>Bitácora mensual</h3><p>Lo que refiere y se compromete, con informe en PDF o Excel.</p></li>
+      </ul>
+    </div>
+    <figure class="medio medio--pc rev-der" data-video=""><img src="img/lideres-1200.webp" srcset="img/lideres-720.webp 720w, img/lideres-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 56vw" width="1200" height="762" alt="Tablero de líderes con crecimiento de la red, acumulado, puntaje y tipificación mes a mes" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<!-- 05 MEDICIÓN -->
+<section id="medicion" class="sec sec--alt">
+  <div class="cont dos dos--media">
+    <div>
+      <p class="eyebrow rev">Medición del trabajo</p>
+      <h2 class="rev">El trabajo se mide, no se supone</h2>
+      <div class="cifras rev">
+        <div><b class="num" data-n="36">36</b><span>referidos</span></div>
+        <div><b class="num" data-n="83" data-suf=" %">83 %</b><span>trabajados</span></div>
+        <div><b class="num" data-n="30">30</b><span>firmes</span></div>
+      </div>
+      <ul class="puntos">
+        <li class="rev"><h3>Intención de voto</h3><p>Cada persona marcada: firme, por confirmar o sin contactar.</p></li>
+        <li class="rev" style="--d:.08s"><h3>Trabajo mes a mes</h3><p>La curva de cada líder; el mes en curso, en vivo.</p></li>
+        <li class="rev" style="--d:.16s"><h3>Votos firmes a la vista</h3><p>Responde la pregunta clave: cuántos votos son seguros.</p></li>
+      </ul>
+    </div>
+    <figure class="medio medio--pc rev-der" data-video=""><img src="img/medicion-1200.webp" srcset="img/medicion-720.webp 720w, img/medicion-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 56vw" width="1200" height="762" alt="Ficha de un líder con intención de voto y trabajo mes a mes" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<!-- 06 BASE DE DATOS -->
+<section id="basedatos" class="sec">
+  <div class="cont dos dos--media">
+    <div>
+      <p class="eyebrow rev">Base de datos</p>
+      <h2 class="rev">Toda la base, ordenada y en vivo</h2>
+      <ul class="puntos">
+        <li class="rev"><h3>Filtros al instante</h3><p>Por líder, intención, zona, estado y actividad: servicios, compromisos, eventos o formularios.</p></li>
+        <li class="rev" style="--d:.08s"><h3>Tablero por zona y puesto</h3><p>Dónde está la fuerza y dónde hay que reforzar.</p></li>
+        <li class="rev" style="--d:.16s"><h3>Registros nuevos, en vivo</h3><p>Lo que agrega un líder aparece sin recargar. Excel y PDF en un toque.</p></li>
+      </ul>
+    </div>
+    <figure class="medio medio--pc rev-der" data-video=""><img src="img/basedatos-1200.webp" srcset="img/basedatos-720.webp 720w, img/basedatos-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 56vw" width="1200" height="762" alt="Base de datos con filtros y tarjetas; datos personales difuminados" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<!-- 07 VALIDACIÓN -->
+<section id="validacion" class="sec sec--alt">
+  <div class="cont dos dos--media">
+    <div>
+      <p class="eyebrow rev">Validación de registros</p>
+      <h2 class="rev">Una base limpia y verificada</h2>
+      <ul class="puntos">
+        <li class="rev"><h3>Por confirmar, con motivo</h3><p>Quién no aparece en el censo o no puede votar, y por qué.</p></li>
+        <li class="rev" style="--d:.08s"><h3>Validación por WhatsApp</h3><p>Cada líder recibe sus registros por confirmar y los corrige.</p></li>
+        <li class="rev" style="--d:.16s"><h3>Depuración ordenada</h3><p>Carga masiva con motivo y salida controlada de quien ya no cuenta.</p></li>
+      </ul>
+    </div>
+    <figure class="medio medio--pc rev-der" data-video=""><img src="img/validacion-1200.webp" srcset="img/validacion-720.webp 720w, img/validacion-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 56vw" width="1200" height="762" alt="Base de datos filtrada en Por confirmar, con el motivo de cada registro y el botón Validación" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<!-- 08 TRAZABILIDAD -->
+<section id="trazabilidad" class="sec">
+  <div class="cont dos dos--media">
+    <div>
+      <p class="eyebrow rev">Trazabilidad</p>
+      <h2 class="rev">La historia completa de cada persona</h2>
+      <ul class="puntos">
+        <li class="rev"><h3>Línea de tiempo</h3><p>Servicios, compromisos, eventos, inscripciones y voto, en un solo lugar.</p></li>
+        <li class="rev" style="--d:.08s"><h3>Constancia de gestión</h3><p>Un PDF con todo lo que se le ha brindado a la persona.</p></li>
+        <li class="rev" style="--d:.16s"><h3>El ciudadano califica</h3><p>Ve sus gestiones y las califica de 1 a 5 estrellas.</p></li>
+      </ul>
+    </div>
+    <div class="combo">
+      <figure class="medio medio--pc rev-der" data-video=""><img src="img/trazabilidad-1200.webp" srcset="img/trazabilidad-720.webp 720w, img/trazabilidad-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 52vw" width="1200" height="762" alt="Trazabilidad de una persona: línea de tiempo y constancia de gestión" loading="lazy" decoding="async"></figure>
+      <figure class="medio medio--cel flota rev-arr" style="--d:.2s" data-video=""><img src="img/gestiones-cel-420.webp" srcset="img/gestiones-cel-280.webp 280w, img/gestiones-cel-420.webp 420w" sizes="(max-width: 900px) 34vw, 14vw" width="420" height="801" alt="Solicitudes y Gestiones en el celular del ciudadano, con calificación por estrellas; datos de ejemplo" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 09 INSCRIPCIONES -->
+<section id="inscripciones" class="sec sec--alt">
+  <div class="cont dos dos--media">
+    <div>
+      <p class="eyebrow rev">Inscripciones</p>
+      <h2 class="rev">Convoque jornadas en minutos</h2>
+      <ul class="puntos">
+        <li class="rev"><h3>Formularios a la medida</h3><p>Preguntas con condiciones, o los que ya tenía en Google Forms.</p></li>
+        <li class="rev" style="--d:.08s"><h3>Cupo bajo control</h3><p>Se cierra solo al llenarse; un documento, una inscripción.</p></li>
+        <li class="rev" style="--d:.16s"><h3>Cada inscrito, confirmado</h3><p>Llamar, WhatsApp, confirmar y sumarlo a la base con su líder. Comprobante con QR.</p></li>
+      </ul>
+    </div>
+    <div class="combo combo--tres">
+      <figure class="medio medio--pc rev-der" data-video=""><img src="img/inscripciones-1200.webp" srcset="img/inscripciones-720.webp 720w, img/inscripciones-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 50vw" width="1200" height="762" alt="Detalles de un formulario: inscritos confirmados, en la base y por agregar" loading="lazy" decoding="async"></figure>
+      <figure class="medio medio--cel c1 rev-arr" style="--d:.15s" data-video=""><img src="img/formulario-cel-420.webp" srcset="img/formulario-cel-280.webp 280w, img/formulario-cel-420.webp 420w" sizes="(max-width: 900px) 30vw, 13vw" width="420" height="801" alt="Formulario de inscripción en el celular con pregunta condicional; formulario de ejemplo" loading="lazy" decoding="async"></figure>
+      <figure class="medio medio--cel c2 flota rev-arr" style="--d:.3s" data-video=""><img src="img/comprobante-cel-420.webp" srcset="img/comprobante-cel-280.webp 280w, img/comprobante-cel-420.webp 420w" sizes="(max-width: 900px) 30vw, 13vw" width="420" height="801" alt="Comprobante de inscripción con código QR; datos de ejemplo" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 10 DÍA DE ELECCIÓN -->
+<section id="diad" class="sec sec--oscura">
+  <div class="fondo-red" aria-hidden="true"></div>
+  <div class="cont dos dos--media">
+    <div>
+      <p class="eyebrow oro rev">Día de elección</p>
+      <h2 class="rev">En vivo, aun sin señal</h2>
+      <div class="cifras rev"><div><b><span class="num" data-n="30">30</span> de 30</b><span>tarjetas leídas seguidas</span></div></div>
+      <ul class="puntos puntos--oro">
+        <li class="rev"><h3>Escáner sin pausas</h3><p>Uno a uno o en ráfaga, con el QR de cada persona.</p></li>
+        <li class="rev" style="--d:.08s"><h3>Conteo en vivo</h3><p>Por puesto, mesa y líder, en el tablero de la dirección.</p></li>
+        <li class="rev" style="--d:.16s"><h3>Sin señal no se detiene</h3><p>Guarda cada lectura y la sube sola al volver la red, sin duplicar.</p></li>
+      </ul>
+    </div>
+    <div class="combo">
+      <figure class="medio medio--pc rev-der" data-video=""><img src="img/votacion-1200.webp" srcset="img/votacion-720.webp 720w, img/votacion-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 52vw" width="1200" height="762" alt="Tablero de votación en vivo por puesto, mesa y líder" loading="lazy" decoding="async"></figure>
+      <figure class="medio medio--cel flota rev-arr" style="--d:.2s" data-video=""><img src="img/escaner-cel-420.webp" srcset="img/escaner-cel-280.webp 280w, img/escaner-cel-420.webp 420w" sizes="(max-width: 900px) 34vw, 14vw" width="420" height="801" alt="Escáner de votación registrando sin conexión; código QR de prueba" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 11 SIN SEÑAL -->
+<section id="sinsenal" class="sec">
+  <div class="cont dos dos--media">
+    <div>
+      <p class="eyebrow rev">Sin conexión</p>
+      <h2 class="rev">Sin señal, la campaña sigue</h2>
+      <ul class="puntos">
+        <li class="rev"><h3>Copia en el teléfono</h3><p>Cada vista abierta con señal queda disponible sin internet.</p></li>
+        <li class="rev" style="--d:.08s"><h3>Pendientes por subir</h3><p>Reuniones, compromisos, estados y bitácoras se guardan y suben con un toque, sin duplicar.</p></li>
+        <li class="rev" style="--d:.16s"><h3>Avisos claros</h3><p>Cada vista dice qué se puede hacer sin señal y qué espera la red.</p></li>
+      </ul>
+    </div>
+    <div class="par-cel">
+      <figure class="medio medio--cel rev-arr" data-video=""><img src="img/sinsenal-cel-420.webp" srcset="img/sinsenal-cel-280.webp 280w, img/sinsenal-cel-420.webp 420w" sizes="(max-width: 900px) 40vw, 16vw" width="420" height="801" alt="Panel de dirección sin conexión: aviso de lo que se puede hacer y lista guardada en el teléfono" loading="lazy" decoding="async"></figure>
+      <figure class="medio medio--cel flota rev-arr" style="--d:.18s" data-video=""><img src="img/escaner-cel-420.webp" srcset="img/escaner-cel-280.webp 280w, img/escaner-cel-420.webp 420w" sizes="(max-width: 900px) 40vw, 16vw" width="420" height="801" alt="Escáner de votación guardando una lectura sin señal" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 12 VELOCIDAD -->
+<section id="velocidad" class="sec sec--alt">
+  <div class="cont">
+    <p class="eyebrow rev">Velocidad</p>
+    <h2 class="rev">Velocidad medida, vista por vista</h2>
+    <div class="vel">
+      <div class="vel__kpis">
+        <div class="kpi kpi--osc rev"><b><span class="num" data-n="0.05" data-dec="2">0,05</span> s</b><span>Abrir cualquier vista</span></div>
+        <div class="kpi rev" style="--d:.08s"><b><span class="num" data-n="0.2" data-dec="1">0,2</span> s</b><span>Volver a abrir una app</span></div>
+        <div class="kpi rev" style="--d:.16s"><b><span class="num" data-n="0.6" data-dec="1">0,6</span> s</b><span>Abrir una app por primera vez</span></div>
+      </div>
+      <div class="tarjeta barras rev">
+        <h3>Datos listos en pantalla, en segundos</h3>
+        <div class="barra-v" style="--v:.12"><span>Formularios</span><i></i><b>0,05</b></div>
+        <div class="barra-v" style="--v:.12"><span>Solicitudes</span><i></i><b>0,05</b></div>
+        <div class="barra-v" style="--v:.12"><span>Análisis</span><i></i><b>0,05</b></div>
+        <div class="barra-v" style="--v:.14"><span>Base de datos</span><i></i><b>0,06</b></div>
+        <div class="barra-v" style="--v:.17"><span>Líderes</span><i></i><b>0,07</b></div>
+        <div class="barra-v" style="--v:.45"><span>Compromisos</span><i></i><b>0,19</b></div>
+        <div class="barra-v" style="--v:1"><span>Dashboard</span><i></i><b>0,42</b></div>
+        <p class="nota">Segundos al volver a cada vista en la misma jornada. Medido el 8 de noviembre de 2026 sobre las aplicaciones publicadas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 SEGURIDAD -->
+<section id="seguridad" class="sec">
+  <div class="cont">
+    <p class="eyebrow rev">Seguridad</p>
+    <h2 class="rev">Su información, protegida de punta a punta</h2>
+    <div class="seg">
+      <div class="seg__grande rev"><svg class="ico oro"><use href="#i-code"/></svg><b>+<span class="num" data-n="24000" data-mil="1">24.000</span></b><p>líneas de programación propia trabajando detrás de cada pantalla.</p></div>
+      <div class="rejilla r2">
+        <article class="tarjeta rev" style="--d:.05s"><svg class="ico"><use href="#i-key"/></svg><h3>Llave que vence</h3><p>Sin sesión válida no sale ni un dato.</p></article>
+        <article class="tarjeta rev" style="--d:.1s"><svg class="ico"><use href="#i-users"/></svg><h3>Cada quien ve lo suyo</h3><p>Roles y permisos por vista; cada líder, solo su red.</p></article>
+        <article class="tarjeta rev" style="--d:.15s"><svg class="ico"><use href="#i-lock"/></svg><h3>Datos personales resguardados</h3><p>Nada público por enlace y autorización según la Ley 1581.</p></article>
+        <article class="tarjeta rev" style="--d:.2s"><svg class="ico"><use href="#i-check"/></svg><h3>Cero duplicados</h3><p>Cada registro se guarda una sola vez, aunque falle la señal.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 14 CIERRE -->
+<section id="cierre" class="sec sec--oscura cierre">
+  <div class="fondo-red" aria-hidden="true"></div>
+  <div class="cont">
+    <p class="eyebrow oro rev">Puesta en marcha</p>
+    <h2 class="titulo-xl rev">Su campaña, con su nombre y sus colores</h2>
+    <ol class="pasos">
+      <li class="rev"><b>01</b><h3>Configuración</h3><p>Nombre, logo, colores, zonas y lo que ve el ciudadano.</p></li>
+      <li class="rev" style="--d:.1s"><b>02</b><h3>Carga y capacitación</h3><p>Su base de datos y su equipo, listos para trabajar.</p></li>
+      <li class="rev" style="--d:.2s"><b>03</b><h3>Acompañamiento</h3><p>Soporte continuo hasta el día de elección.</p></li>
+    </ol>
+    <div class="agenda rev">
+      <div>
+        <h3 class="agenda__t">Agendemos una demostración</h3>
+        <p>O genere ahora la propuesta para su municipio: le llega en PDF al correo.</p>
+        <div class="agenda__btns">
+          <button class="btn btn--oro btn--grande" type="button" data-abrir-propuesta>Quiero generar la propuesta <svg><use href="#i-arrow"/></svg></button>
+          <a class="btn btn--vidrio" href="https://wa.me/573103230712?text=Hola%20Oscar%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20del%20Ecosistema%20Digital%20de%20Campa%C3%B1a." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> +57 310 323 0712</a>
+          <a class="btn btn--vidrio" href="mailto:opolania11@gmail.com"><svg><use href="#i-mail"/></svg> opolania11@gmail.com</a>
+        </div>
+      </div>
+      <div class="firma">
+        <img src="img/logo-192.png" width="88" height="88" alt="Logo de Oscar Polania" loading="lazy">
+        <div><b>Oscar Polania</b><span>Experto en soluciones digitales</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <p>© <span id="anio">2026</span> Oscar Polania · Experto en soluciones digitales. Pantallazos reales con datos personales difuminados; los celulares muestran datos de ejemplo.</p>
+  <p class="pie__v">v<span id="ver"></span></p>
+</footer>
+
+<!-- GENERADOR DE PROPUESTA -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__fondo" data-cerrar></div>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="pTitulo">
+    <div class="panel__borde" aria-hidden="true"></div>
+    <button class="panel__x" type="button" data-cerrar aria-label="Cerrar"><svg><use href="#i-x"/></svg></button>
+    <div class="panel__cab">
+      <img src="img/logo-96.webp" width="40" height="40" alt="">
+      <div><p class="eyebrow oro">Generador de propuesta</p><h2 id="pTitulo">Su propuesta en PDF, al correo</h2></div>
+    </div>
+    <div class="pasitos" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+
+    <form id="fProp" class="paso" data-paso="1" novalidate autocomplete="on">
+      <label class="campo">
+        <span>Nombre del candidato</span>
+        <input id="fCand" name="candidato" type="text" maxlength="80" autocomplete="name" placeholder="Nombre y apellido" required>
+        <small class="msg" data-msg="candidato"></small>
+      </label>
+
+      <fieldset class="campo">
+        <legend>Departamento</legend>
+        <div class="deptos">
+          <label class="depto"><input type="radio" name="departamento" value="Tolima"><span><b>Tolima</b><small>47 municipios</small></span></label>
+          <label class="depto"><input type="radio" name="departamento" value="Cundinamarca"><span><b>Cundinamarca</b><small>116 municipios</small></span></label>
+        </div>
+        <small class="msg" data-msg="departamento"></small>
+      </fieldset>
+
+      <div class="campo combo-mun">
+        <label for="fMun">Municipio</label>
+        <input id="fMun" type="text" role="combobox" aria-expanded="false" aria-controls="lMun" aria-autocomplete="list" autocomplete="off" placeholder="Primero elija el departamento" disabled>
+        <ul id="lMun" class="lista" role="listbox" hidden></ul>
+        <small class="msg" data-msg="municipio"></small>
+      </div>
+
+      <div class="campo">
+        <label for="fCorreo0">Correo</label>
+        <div class="correo"><input id="fCorreo0" class="inCorreo" type="email" inputmode="email" maxlength="120" autocomplete="email" placeholder="correo@dominio.com"><span class="estado-c" aria-hidden="true"></span></div>
+        <small class="msg" data-msg="c0"></small>
+      </div>
+      <div id="copias"></div>
+      <button class="btn btn--linea btn--sm" type="button" id="btnCopia"><svg><use href="#i-plus"/></svg> Copiar a otro correo</button>
+
+      <label class="trampa" aria-hidden="true">Sitio web <input type="text" name="sitio" id="fHp" tabindex="-1" autocomplete="off"></label>
+
+      <button class="btn btn--oro btn--ancho" type="submit">Revisar y confirmar <svg><use href="#i-arrow"/></svg></button>
+    </form>
+
+    <div class="paso" data-paso="2" hidden>
+      <p class="sub">Confirme los datos. La propuesta se arma con ellos.</p>
+      <dl class="resumen" id="resumen"></dl>
+      <div class="dos-btn">
+        <button class="btn btn--linea" type="button" id="btnEditar">Corregir</button>
+        <button class="btn btn--oro" type="button" id="btnEnviar"><span>Confirmar y generar</span><svg><use href="#i-arrow"/></svg></button>
+      </div>
+      <small class="msg msg--gen" id="msgEnvio" role="alert"></small>
+    </div>
+
+    <div class="paso fin" data-paso="3" hidden>
+      <div class="fin__ok" aria-hidden="true"><svg><use href="#i-check"/></svg></div>
+      <h3>¡Listo! Su propuesta está en camino</h3>
+      <p id="finTxt">En unos minutos llega el PDF al correo.</p>
+      <p class="fin__id" id="finId"></p>
+      <a class="btn btn--oro" id="finWa" target="_blank" rel="noopener" href="https://wa.me/573103230712"><svg><use href="#i-wa"/></svg> Agendar la demostración</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js?v=2026.11.16.1"></script>
+<script src="js/app.js?v=2026.11.16.1" defer></script>
+</body>
+</html>

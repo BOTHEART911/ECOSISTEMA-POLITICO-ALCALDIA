@@ -1,0 +1,14 @@
+{
+  "name": "Ecosistema Digital de Campaña · Oscar Polania",
+  "short_name": "Ecosistema",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0B1324",
+  "theme_color": "#0B1324",
+  "lang": "es",
+  "icons": [
+    {"src": "img/logo-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "img/logo-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}
