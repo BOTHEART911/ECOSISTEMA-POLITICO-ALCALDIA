@@ -1,4 +1,4 @@
-/* Ecosistema Digital de Campaña · Oscar Polania
+/* Ecosistema Digital de Campaña · Oscar Polanía
    Efectos al desplazarse, medios diferidos, modo claro/oscuro, service worker
    y generador de propuesta (un solo viaje al backend). */
 (function(){
@@ -95,6 +95,42 @@ $$('.medio[data-video]').forEach(function(f){
     if(vio) vio.observe(f);
   } else if(vio) vio.observe(f);
 });
+
+/* ---------- video de YouTube: PC el horizontal, celular el Short (patrón de Tutoriales de JHONNY PRIV) ---------- */
+(function(){
+  var f = $('#yt'); if(!f) return;
+  var img = $('.yt__img', f), enlace = $('#ytEnlace'), mq = matchMedia('(max-width: 767px), (pointer: coarse) and (max-width: 1024px)');
+  var modo = '';
+  function fuentes(cel){
+    var id = cel ? f.dataset.cel : f.dataset.pc;
+    return cel ? ['https://i.ytimg.com/vi/'+id+'/oar2.jpg','https://i.ytimg.com/vi/'+id+'/maxresdefault.jpg','https://i.ytimg.com/vi/'+id+'/hqdefault.jpg']
+               : ['https://i.ytimg.com/vi/'+id+'/maxresdefault.jpg','https://i.ytimg.com/vi/'+id+'/hqdefault.jpg'];
+  }
+  function pinta(){
+    if(f.classList.contains('sonando')) return;            // no se cambia mientras se reproduce
+    var cel = mq.matches, m = cel ? 'cel' : 'pc'; if(m === modo) return; modo = m;
+    f.classList.toggle('yt--short', cel);
+    var L = fuentes(cel), i = 0;
+    img.classList.remove('sin'); img.width = cel ? 540 : 1280; img.height = cel ? 960 : 720;
+    img.onerror = function(){ i++; if(i < L.length) img.src = L[i]; else img.classList.add('sin'); };
+    img.onload = function(){ if(img.naturalWidth === 120 && i < L.length-1){ i++; img.src = L[i]; } };   // maxres inexistente = gris 120×90
+    img.src = L[0];
+    $('.yt__t', f).textContent = cel ? f.dataset.tituloCel : f.dataset.tituloPc;
+    enlace.href = cel ? 'https://youtube.com/shorts/'+f.dataset.cel : 'https://youtu.be/'+f.dataset.pc;
+  }
+  function reproducir(){
+    if(f.classList.contains('sonando')) return;
+    var id = modo === 'cel' ? f.dataset.cel : f.dataset.pc;
+    f.classList.add('sonando');
+    var fr = document.createElement('iframe');
+    fr.src = 'https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3';
+    fr.title = $('.yt__t', f).textContent; fr.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; fr.allowFullscreen = true;
+    f.appendChild(fr); marca('video');
+  }
+  f.addEventListener('click', reproducir);
+  if(mq.addEventListener) mq.addEventListener('change', pinta); else if(mq.addListener) mq.addListener(pinta);
+  pinta();
+})();
 
 /* ---------- service worker en modo fresco ---------- */
 if('serviceWorker' in navigator){

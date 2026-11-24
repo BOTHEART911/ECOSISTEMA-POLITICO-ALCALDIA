@@ -3,14 +3,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/readme/banner-oscuro.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/readme/banner-claro.svg">
-  <img alt="Oscar Polania · Experto en soluciones digitales" src="assets/readme/banner-oscuro.svg" width="100%">
+  <img alt="Oscar Polanía · Experto en soluciones digitales" src="assets/readme/banner-oscuro.svg" width="100%">
 </picture>
 
 <br><br>
 
 <img src="assets/readme/icono.png" width="72" alt="Ícono">
 
-### Desarrollado por **Oscar Polania**
+### Desarrollado por **Oscar Polanía**
 **Experto en soluciones digitales**
 
 <br>
@@ -20,7 +20,7 @@
 
 <br><br>
 
-<img src="assets/readme/oscar.jpg" width="220" alt="Oscar Polania" style="border-radius:50%">
+<img src="assets/readme/oscar.jpg" width="220" alt="Oscar Polanía" style="border-radius:50%">
 
 <br><br>
 
@@ -30,6 +30,6 @@
 
 <br><br>
 
-<sub>© Oscar Polania · Experto en soluciones digitales</sub>
+<sub>© Oscar Polanía · Experto en soluciones digitales</sub>
 
 </div>

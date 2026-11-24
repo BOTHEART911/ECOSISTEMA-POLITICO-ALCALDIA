@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Ecosistema Digital de Campaña · Oscar Polania</title>
+<title>Ecosistema Digital de Campaña · Oscar Polanía</title>
 <meta name="description" content="Ocho aplicaciones conectadas para dirigir líderes, votantes y el día de elección desde un solo lugar. La campaña que se mide, gana.">
 <meta name="theme-color" content="#0B1324">
 <meta property="og:title" content="Ecosistema Digital de Campaña">
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700&display=swap">
 <link rel="preload" as="image" href="img/tablero-1200.webp" imagesrcset="img/tablero-720.webp 720w, img/tablero-1200.webp 1200w" imagesizes="(max-width: 900px) 92vw, 56vw">
 <script>try{var t=localStorage.getItem('ep_tema');if(t)document.documentElement.dataset.tema=t;}catch(e){}</script>
-<link rel="stylesheet" href="css/app.css?v=2026.11.16.2">
+<link rel="stylesheet" href="css/app.css?v=2026.11.23.1">
 <script src="version.js"></script>
 </head>
 <body>
@@ -55,7 +55,7 @@
 <header class="barra" id="barra">
   <a class="marca" href="#portada" aria-label="Inicio">
     <img src="img/logo-96.webp" width="36" height="36" alt="">
-    <span><b>OSCAR POLANIA</b><small>Experto en soluciones digitales</small></span>
+    <span><b>OSCAR POLANÍA</b><small>Experto en soluciones digitales</small></span>
   </a>
   <nav class="barra__acc">
     <button class="tema" id="btnTema" type="button" aria-label="Cambiar modo claro u oscuro"><svg><use href="#i-moon"/></svg></button>
@@ -74,7 +74,7 @@
     <p class="lead rev" style="--d:.16s">Ocho aplicaciones conectadas para dirigir líderes, votantes y el día de elección desde un solo lugar.</p>
     <div class="hero__cta rev" style="--d:.24s">
       <button class="btn btn--oro" type="button" data-abrir-propuesta>Quiero generar la propuesta <svg><use href="#i-arrow"/></svg></button>
-      <a class="btn btn--vidrio" href="#video">Ver en 45 segundos <svg><use href="#i-play"/></svg></a>
+      <a class="btn btn--vidrio" href="#video">Ver el video <svg><use href="#i-play"/></svg></a>
     </div>
   </div>
   <div class="hero__media">
@@ -125,15 +125,19 @@
 <!-- VIDEO -->
 <section id="video" class="sec sec--oscura">
   <div class="fondo-red" aria-hidden="true"></div>
-  <div class="cont dos">
+  <div class="cont dos dos--video">
     <div>
-      <p class="eyebrow oro rev">En 45 segundos</p>
+      <p class="eyebrow oro rev">En video</p>
       <h2 class="rev">Las ocho aplicaciones, funcionando</h2>
       <p class="lead rev">Panel de dirección, app ciudadana, inscripciones, votación, asistencias, comercios, call center y avisos al celular, grabados en uso real con datos de ejemplo.</p>
+      <a class="btn btn--vidrio yt-enlace rev" id="ytEnlace" href="https://youtu.be/v2igHt49qds" target="_blank" rel="noopener"><svg><use href="#i-play"/></svg> Verlo en YouTube</a>
     </div>
-    <figure class="medio medio--cel medio--video rev-der" data-video="vid/promo-9x16.mp4" data-sonido="1">
-      <img src="img/promo-poster.webp" width="360" height="640" alt="Video promocional del ecosistema" loading="lazy" decoding="async">
-      <button class="play" type="button" aria-label="Reproducir con sonido"><svg><use href="#i-play"/></svg></button>
+    <!-- Video de YouTube: en PC el horizontal, en celular el Short. Primero solo la miniatura; el reproductor carga al tocar. -->
+    <figure class="yt rev-der" id="yt" data-pc="v2igHt49qds" data-cel="mb6TfnDMz04"
+            data-titulo-pc="La campaña que se mide, gana: 8 apps conectadas para tu campaña" data-titulo-cel="La campaña que se mide, gana">
+      <img class="yt__img" alt="" width="1280" height="720" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <button class="yt__play" type="button" aria-label="Reproducir el video"><svg><use href="#i-play"/></svg></button>
+      <figcaption class="yt__pie"><span class="yt__marca">YouTube</span><span class="yt__t"></span></figcaption>
     </figure>
   </div>
 </section>
@@ -351,8 +355,8 @@
         </div>
       </div>
       <div class="firma">
-        <img src="img/logo-192.png" width="88" height="88" alt="Logo de Oscar Polania" loading="lazy">
-        <div><b>Oscar Polania</b><span>Experto en soluciones digitales</span></div>
+        <img src="img/logo-192.png" width="88" height="88" alt="Logo de Oscar Polanía" loading="lazy">
+        <div><b>Oscar Polanía</b><span>Experto en soluciones digitales</span></div>
       </div>
     </div>
   </div>
@@ -360,7 +364,7 @@
 </main>
 
 <footer class="pie">
-  <p>© <span id="anio">2026</span> Oscar Polania · Experto en soluciones digitales. Pantallazos reales con datos personales difuminados; los celulares muestran datos de ejemplo.</p>
+  <p>© <span id="anio">2026</span> Oscar Polanía · Experto en soluciones digitales. Pantallazos reales con datos personales difuminados; los celulares muestran datos de ejemplo.</p>
   <p class="pie__v">v<span id="ver"></span></p>
 </footer>
 
@@ -432,7 +436,7 @@
   </div>
 </div>
 
-<script src="js/config.js?v=2026.11.16.2"></script>
-<script src="js/app.js?v=2026.11.16.2" defer></script>
+<script src="js/config.js?v=2026.11.23.1"></script>
+<script src="js/app.js?v=2026.11.23.1" defer></script>
 </body>
 </html>
