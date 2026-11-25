@@ -42,6 +42,19 @@ function alDesplazar(){
 addEventListener('scroll', function(){ if(!pend){ pend = true; requestAnimationFrame(alDesplazar); } }, {passive:true});
 alDesplazar();
 
+/* ---------- aviso «la propuesta está al final»: visible mientras se recorre, se retira al llegar al cierre ---------- */
+(function(){
+  var av = $('#avisoFinal'), cierre = $('#cierre'); if(!av || !cierre) return;
+  var enCierre = false;
+  function pon(){ av.classList.toggle('oculto', enCierre || !$('#modal').hidden); }
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){ enCierre = e[0].isIntersecting; pon(); }, {rootMargin:'0px 0px -35% 0px'}).observe(cierre);
+  }
+  addEventListener('scroll', function(){ requestAnimationFrame(pon); }, {passive:true});
+  document.addEventListener('ep:modal', pon);
+  pon();
+})();
+
 /* ---------- revelado + números que cuentan ---------- */
 function cuenta(el){
   var fin = parseFloat(el.dataset.n), dec = +(el.dataset.dec||0), suf = el.dataset.suf||'', mil = el.dataset.mil, t0 = null, dur = 1400;
@@ -164,11 +177,11 @@ function irPaso(n){
 }
 function abrir(){
   foco = document.activeElement; modal.hidden = false; document.body.classList.add('bloq'); estado.abierto = performance.now();
-  cargaDivipola(); irPaso(1);
+  cargaDivipola(); irPaso(1); document.dispatchEvent(new Event('ep:modal'));
 }
 function cerrar(){
   if(estado.enviando) return;
-  modal.hidden = true; document.body.classList.remove('bloq'); if(foco && foco.focus) foco.focus();
+  modal.hidden = true; document.body.classList.remove('bloq'); if(foco && foco.focus) foco.focus(); document.dispatchEvent(new Event('ep:modal'));
 }
 $$('[data-abrir-propuesta]').forEach(function(b){ b.addEventListener('click', abrir); });
 $$('[data-cerrar]', modal).forEach(function(b){ b.addEventListener('click', cerrar); });

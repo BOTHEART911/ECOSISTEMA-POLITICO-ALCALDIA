@@ -311,3 +311,19 @@ body.bloq{overflow:hidden}
 .yt.sonando .yt__play,.yt.sonando .yt__pie,.yt.sonando .yt__img{display:none}
 .yt-enlace{margin-top:26px}
 @media (max-width:1000px){.dos--video{grid-template-columns:1fr}}
+
+/* Aviso pequeño y translúcido: la propuesta está al final (reemplaza los botones de arriba) */
+.aviso-final{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));z-index:35;display:flex;align-items:center;gap:10px;
+  max-width:calc(100vw - 28px);padding:10px 16px;border-radius:999px;font-size:.88rem;line-height:1.25;color:#EEF2F8;
+  background:rgba(11,19,36,.55);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(12px) saturate(1.3);-webkit-backdrop-filter:blur(12px) saturate(1.3);
+  box-shadow:0 10px 30px -14px rgba(0,0,0,.55);transform:translate(-50%,0);opacity:1;transition:opacity .45s ease,transform .45s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+.aviso-final b{color:var(--oro);font-weight:800}
+.aviso-final__punto{flex:none;width:8px;height:8px;border-radius:50%;background:var(--oro);box-shadow:0 0 0 0 rgba(245,165,36,.6);animation:aviso 2.4s ease-out infinite}
+.aviso-final__flecha{flex:none;width:16px;height:16px;transform:rotate(90deg);color:var(--oro);animation:avisoBaja 2.4s ease-in-out infinite}
+.aviso-final.oculto{opacity:0;transform:translate(-50%,24px)}
+@keyframes aviso{70%{box-shadow:0 0 0 9px rgba(245,165,36,0)}100%{box-shadow:0 0 0 0 rgba(245,165,36,0)}}
+@keyframes avisoBaja{50%{translate:0 3px}}
+@media (max-width:640px){.aviso-final{font-size:.8rem;padding:9px 14px;gap:8px}}
+.aviso-final{white-space:nowrap}
+.aviso-final__corto{display:none}
+@media (max-width:640px){.aviso-final__largo{display:none}.aviso-final__corto{display:inline}}

@@ -1,1 +1,1 @@
-self.EP_VERSION='2026.11.23.1';
+self.EP_VERSION='2026.11.24.1';
